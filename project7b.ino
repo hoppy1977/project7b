@@ -55,7 +55,7 @@ void loop() {
   
   int coin_value = analogRead(A7);
   //Serial.println(coin_value);
-  if(coin_value > coin_threshold && abs(millis() - last_coin_timestamp) > coin_debounce_time) {
+  if(coin_value < coin_threshold && abs(millis() - last_coin_timestamp) > coin_debounce_time) {
     last_coin_timestamp = millis();
     coin_credit++;
     Serial.println("New credit: " + (String)coin_credit);
