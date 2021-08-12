@@ -43,7 +43,7 @@ unsigned long hold_timestamp = 0;
 unsigned long time_load_mode_pressed = 0;
 boolean load_mode = false;
 int last_loading_rack = -1;
-const int loading_speed = 5;
+const int loading_speed = 10;
 
 void loop() {
   if(coin_credit > 0) {
